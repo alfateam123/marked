@@ -50,8 +50,8 @@ add_to_tests([
 		    bb: "[gist]7cc354929eb3d8817857[/gist] [url=http://nwa]<http://google.com>[/url]", 
 		},
 		"if inside urls, <autourl> must not be expanded (2)":{
-			md: "saafa _asdasd_\n[math]\\sqrt-1 * \\frac{5}{b*2*3}-q_ad[/math]_\n[cur]**asd**[/cur]\n[url=http://google.com]<http://alfateam123.niggazwithattitu.de>[/url]",
-			bb: "saafa [cur]asdasd[/cur]\n[math]\\sqrt-1 * \\frac{5}{b*2*3}-q_ad[/math]_\n[cur][b]asd[/b][/cur]\n[url=http://google.com]<http://alfateam123.niggazwithattitu.de>[/url]"
+			md: "saafa _asdasd_\n[math]\\sqrt-1 * \\frac{5}{b*2*3}-q_ad[/math]_\n[i]**asd**[/i]\n[url=http://google.com]<http://alfateam123.niggazwithattitu.de>[/url]",
+			bb: "saafa [i]asdasd[/i]\n[math]\\sqrt-1 * \\frac{5}{b*2*3}-q_ad[/math]_\n[i][b]asd[/b][/i]\n[url=http://google.com]<http://alfateam123.niggazwithattitu.de>[/url]"
 		}
 	}
 },
