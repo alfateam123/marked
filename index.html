@@ -29,21 +29,21 @@
           '\n\n<https://gist.github.com/alfateam123/7cc354929eb3d8817857>\n\n@alfateam123 #Nerdzilla\n\n~~you didn\'t see a thing~~';
 
       // Set source text
-      source.textContent = text;
+      source.value = text;
 
       // Update the preview every time the input text changes
       // (sort of real time preview)
       source.addEventListener('keyup', function() {
-        target.textContent = marked(source.textContent);
+        target.value = marked(source.value);
       }, false);
 
       // Convert text after page load
-      target.textContent = marked(source.textContent);
+      target.value = marked(source.value);
     });
 
     // It doesn't work yet, text must be escaped before sending it
     var nerdzpreview = function() {
-      document.location.href = "https://www.nerdz.eu/preview.php?message=" + document.getElementById("bb").textContent;
+      document.location.href = "https://www.nerdz.eu/preview.php?message=" + document.getElementById("bb").value;
     }
   </script>
 </body>
