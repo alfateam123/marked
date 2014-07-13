@@ -20,7 +20,7 @@ add_to_tests([
 			},
 			'formatted text': {
 				md: '[**got** _shit_](http://4chan.org)',
-				bb: '[url="http://4chan.org"][b]got[/b] [cur]shit[/cur][/url]',
+				bb: '[url="http://4chan.org"][b]got[/b] [i]shit[/i][/url]',
 			},
 			'do not encode html entitities':  {
 				md: '[httpbintest](http://httpbin.org/response-headers?Content-Type=text/plain;%20charset=UTF-8&Server=httpbin)',
@@ -45,7 +45,7 @@ add_to_tests([
 		},
 		'formatted text with @user and #project': {
 			md: '[**got** _shit_ by @user! saw into #project](http://4chan.org)',
-			bb: '[url="http://4chan.org"][b]got[/b] [cur]shit[/cur] by @user! saw into #project[/url]'
+			bb: '[url="http://4chan.org"][b]got[/b] [i]shit[/i] by @user! saw into #project[/url]'
 		}
 	}
 }
