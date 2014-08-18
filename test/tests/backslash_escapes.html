@@ -1,40 +1,40 @@
-<p>These should all get escaped:</p>
+These should all get escaped:
 
-<p>Backslash: \</p>
+Backslash: \
 
-<p>Backtick: `</p>
+Backtick: `
 
-<p>Asterisk: *</p>
+Asterisk: *
 
-<p>Underscore: _</p>
+Underscore: _
 
-<p>Left brace: {</p>
+Left brace: {
 
-<p>Right brace: }</p>
+Right brace: }
 
-<p>Left bracket: [</p>
+Left bracket: [
 
-<p>Right bracket: ]</p>
+Right bracket: ]
 
-<p>Left paren: (</p>
+Left paren: (
 
-<p>Right paren: )</p>
+Right paren: )
 
-<p>Greater-than: ></p>
+Greater-than: >
 
-<p>Hash: #</p>
+Hash: #
 
-<p>Period: .</p>
+Period: .
 
-<p>Bang: !</p>
+Bang: !
 
-<p>Plus: +</p>
+Plus: +
 
-<p>Minus: -</p>
+Minus: -
 
-<p>These should not, because they occur within a code block:</p>
+These should not, because they occur within a code block:
 
-<pre><code>Backslash: \\
+[code=text]Backslash: \\
 
 Backtick: \`
 
@@ -65,54 +65,54 @@ Bang: \!
 Plus: \+
 
 Minus: \-
-</code></pre>
+[/code]
 
-<p>Nor should these, which occur in code spans:</p>
+Nor should these, which occur in code spans:
 
-<p>Backslash: <code>\\</code></p>
+Backslash: [code=text]\\[/code]
 
-<p>Backtick: <code>\`</code></p>
+Backtick: [code=text]\`[/code]
 
-<p>Asterisk: <code>\*</code></p>
+Asterisk: [code=text]\*[/code]
 
-<p>Underscore: <code>\_</code></p>
+Underscore: [code=text]\_[/code]
 
-<p>Left brace: <code>\{</code></p>
+Left brace: [code=text]\{[/code]
 
-<p>Right brace: <code>\}</code></p>
+Right brace: [code=text]\}[/code]
 
-<p>Left bracket: <code>\[</code></p>
+Left bracket: [code=text]\[[/code]
 
-<p>Right bracket: <code>\]</code></p>
+Right bracket: [code=text]\][/code]
 
-<p>Left paren: <code>\(</code></p>
+Left paren: [code=text]\([/code]
 
-<p>Right paren: <code>\)</code></p>
+Right paren: [code=text]\)[/code]
 
-<p>Greater-than: <code>\&gt;</code></p>
+Greater-than: [code=text]\&gt;[/code]
 
-<p>Hash: <code>\#</code></p>
+Hash: [code=text]\#[/code]
 
-<p>Period: <code>\.</code></p>
+Period: [code=text]\.[/code]
 
-<p>Bang: <code>\!</code></p>
+Bang: [code=text]\![/code]
 
-<p>Plus: <code>\+</code></p>
+Plus: [code=text]\+[/code]
 
-<p>Minus: <code>\-</code></p>
+Minus: [code=text]\-[/code]
 
 
-<p>These should get escaped, even though they&#39;re matching pairs for
-other Markdown constructs:</p>
+These should get escaped, even though they&#39;re matching pairs for
+other Markdown constructs:
 
-<p>*asterisks*</p>
+*asterisks*
 
-<p>_underscores_</p>
+_underscores_
 
-<p>`backticks`</p>
+`backticks`
 
-<p>This is a code span with a literal backslash-backtick sequence: <code>\`</code></p>
+This is a code span with a literal backslash-backtick sequence: [code=text]\`[/code]
 
-<p>This is a tag with unescaped backticks <span attr='`ticks`'>bar</span>.</p>
+This is a tag with unescaped backticks <span attr='`ticks`'>bar</span>.
 
-<p>This is a tag with backslashes <span attr='\\backslashes\\'>bar</span>.</p>
+This is a tag with backslashes <span attr='\\backslashes\\'>bar</span>.

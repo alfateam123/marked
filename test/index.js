@@ -42,7 +42,8 @@ function load() {
 
   for (; i < l; i++) {
     file = path.join(dir, list[i]);
-    files[path.basename(file)] = {
+    //files[path.basename(file)] = {
+    files[file] = {
       text: fs.readFileSync(file, 'utf8'),
       html: fs.readFileSync(file.replace(/[^.]+$/, 'html'), 'utf8')
     };
