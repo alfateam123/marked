@@ -1,8 +1,8 @@
 Here&#39;s a simple block:
 
-
+<div>
     foo
-
+</div>
 
 This should be a code block, though:
 
@@ -17,8 +17,13 @@ As should this:
 [/code]
 
 Now, nested:
-
+<div>
+	<div>
+		<div>
             foo
+        </div>
+    </div>
+</div>
 
 This should just be an HTML comment:
 
@@ -47,20 +52,20 @@ Code:
 
 Hr&#39;s:
 
-[hr]
+<hr>
 
-[hr]
+<hr>
 
-[hr]
+<hr>
 
-[hr]
+<hr>   
 
-[hr]
+<hr>  
 
-[hr]
+<hr> 
 
-[hr]
+<hr class="foo" id="bar" />
 
-[hr]
+<hr class="foo" id="bar"/>
 
-[hr]
+<hr class="foo" id="bar" >
