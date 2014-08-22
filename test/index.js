@@ -22,10 +22,11 @@ function load() {
   var paths = [
       '/tests'
       //, '/bbcode'
+      , '/nerdz'
       ];
+  var files = {};
   for(var p_i=0; p_i<paths.length; p_i++){
     var dir = __dirname + paths[p_i]// '/tests'
-      , files = {}
       , list
       , file
       , i
@@ -104,8 +105,6 @@ main:
     if(/test\/bbcode\//.test(filename)){
       marked.setOptions({nerdz: true});
     }
-    if(/\.js/.test(filename))
-      continue;
 
     flags = filename.split('.').slice(1, -1);
     if (flags.length) {
