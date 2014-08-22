@@ -19,36 +19,43 @@ var fs = require('fs')
  */
 
 function load() {
-  var dir = __dirname + '/tests'
-    , files = {}
-    , list
-    , file
-    , i
-    , l;
+  var paths = [
+      '/tests'
+      //, '/bbcode'
+      ];
+  for(var p_i=0; p_i<paths.length; p_i++){
+    var dir = __dirname + paths[p_i]// '/tests'
+      , files = {}
+      , list
+      , file
+      , i
+      , l;
 
-  list = fs
-    .readdirSync(dir)
-    .filter(function(file) {
-      return path.extname(file) !== '.html';
-    })
-    .sort(function(a, b) {
-      a = path.basename(a).toLowerCase().charCodeAt(0);
-      b = path.basename(b).toLowerCase().charCodeAt(0);
-      return a > b ? 1 : (a < b ? -1 : 0);
-    });
+    //console.log("dir: ", dir, "paths[i]=", paths[p_i]);
+    list = fs
+      .readdirSync(dir)
+      .filter(function(file) {
+        return path.extname(file) !== '.html';
+      })
+      .sort(function(a, b) {
+        a = path.basename(a).toLowerCase().charCodeAt(0);
+        b = path.basename(b).toLowerCase().charCodeAt(0);
+        return a > b ? 1 : (a < b ? -1 : 0);
+      });
 
-  i = 0;
-  l = list.length;
+    i = 0;
+    l = list.length;
 
-  for (; i < l; i++) {
-    file = path.join(dir, list[i]);
-    //files[path.basename(file)] = {
-    files[file] = {
-      text: fs.readFileSync(file, 'utf8'),
-      html: fs.readFileSync(file.replace(/[^.]+$/, 'html'), 'utf8')
-    };
+    for (; i < l; i++) {
+      file = path.join(dir, list[i]);
+      //console.log("added %s", file)
+      //files[path.basename(file)] = {
+      files[file] = {
+        text: fs.readFileSync(file, 'utf8'),
+        html: fs.readFileSync(file.replace(/[^.]+$/, 'html'), 'utf8')
+      };
+    }
   }
-
   return files;
 }
 
@@ -92,6 +99,13 @@ main:
       marked.defaults = marked._original;
       delete marked._original;
     }
+
+    //check if test for nerdz bbcode
+    if(/test\/bbcode\//.test(filename)){
+      marked.setOptions({nerdz: true});
+    }
+    if(/\.js/.test(filename))
+      continue;
 
     flags = filename.split('.').slice(1, -1);
     if (flags.length) {
@@ -529,7 +543,7 @@ function main(argv) {
  */
 
 if (!module.parent) {
-  process.title = 'marked';
+  process.title = 'marked tests';
   process.exit(main(process.argv.slice()) ? 0 : 1);
 } else {
   exports = main;
