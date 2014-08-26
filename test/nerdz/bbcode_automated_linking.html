@@ -1,0 +1,35 @@
+autolink does not create a [gist] 
+[url]https://gist.github.com/alfateam123/7cc354929eb3d8817857[/url]
+		
+simple url with http:// 
+[url]http://nerdz.eu[/url]
+		
+nerdz.eu without http:// 
+nerdz.eu
+		
+links with parameters
+[url]http://google.com/test.pl?test=5[/url]
+		
+inside text
+in a [url]http://rubular.com[/url] test
+		
+not converting if into [url] tags
+test [url=http://google.com]http://google.com[/url]	
+		
+no [project] inside links 
+[url]https://alfa.nwa#test[/url]	
+		
+no [user] inside links 
+[url]https://alfa.nwa@test[/url]	
+		
+complex url 
+[url]http://httpbin.org/response-headers?Content-Type=text/plain;%20charset=UTF-8&Server=httpbin[/url]
+		
+no autourl inside [code]:
+[code=perl]my newurl = "http://google.com"[/code]
+		
+htt:p// 
+htt:p//google.com
+		
+do not expand links inside [url] tags 
+[url]http://google.com[/url]
