@@ -20,9 +20,8 @@ var fs = require('fs')
 
 function load() {
   var paths = [
-      '/tests'
-      //, '/bbcode'
-      , '/nerdz'
+      '/tests',
+      '/nerdz'
       ];
   var files = {};
   for(var p_i=0; p_i<paths.length; p_i++){
@@ -102,8 +101,10 @@ main:
     }
 
     //check if test for nerdz bbcode
-    if(/test\/bbcode\//.test(filename)){
-      marked.setOptions({nerdz: true});
+    //console.log(/nerdz/.test(filename))
+    if(/nerdz/.test(filename)){
+      //marked.setOptions({nerdz: true});
+      marked.defaults.nerdz = true;
     }
 
     flags = filename.split('.').slice(1, -1);
